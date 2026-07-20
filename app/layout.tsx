@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import { AnalyticsEvents } from "./components/AnalyticsEvents";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -13,11 +14,14 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(`${protocol}://${host}`),
     title,
     description,
+    alternates: { canonical: "/consultores/felipe-soares" },
+    robots: { index: true, follow: true },
+    icons: { icon: "/es11-logo.png" },
     openGraph: { title, description, type: "website", images: [{ url: "/og.png", width: 1680, height: 945, alt: "Felipe Soares - Estratégias patrimoniais com clareza" }] },
     twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
   };
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body>{children}</body></html>;
+  return <html lang="pt-BR"><body><AnalyticsEvents />{children}</body></html>;
 }
