@@ -19,7 +19,7 @@ const specialties = [
   },
 ];
 
-const process = [
+const processSteps = [
   ["01", "Escuta", "Você compartilha o que deseja construir, adquirir ou estruturar."],
   ["02", "Diagnóstico", "Analisamos objetivos, momento financeiro, prazo e prioridades."],
   ["03", "Cenários", "Comparamos caminhos e seus impactos para uma decisão mais consciente."],
@@ -126,7 +126,7 @@ export default function Home() {
           <h2>Antes de qualquer solução,<br /><em>entendemos o cenário.</em></h2>
           <p className="method-intro">Antes de apresentar qualquer caminho, busco entender seus objetivos, sua realidade financeira e seus planos futuros. Assim, o planejamento nasce alinhado ao que importa para você.</p>
           <div className="process-grid">
-            {process.map(([number, title, text]) => (
+            {processSteps.map(([number, title, text]) => (
               <article key={number}>
                 <span>{number}</span><h3>{title}</h3><p>{text}</p>
               </article>
