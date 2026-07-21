@@ -17,12 +17,11 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: { canonical: "/" },
     robots: { index: true, follow: true },
     icons: { icon: "/es11-logo.png" },
-    openGraph: { title, description, type: "website", images: [{ url: "/og-share-square.png?v=20260721-2", width: 1200, height: 1200, type: "image/png", alt: "Felipe Soares | ES11 Capital" }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-share-square.png?v=20260721-2"] },
+    openGraph: { title, description, type: "website", images: [{ url: "/og-whatsapp-thumb.png?v=20260721-3", width: 1200, height: 1200, type: "image/png", alt: "Felipe Soares | ES11 Capital" }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/og-whatsapp-thumb.png?v=20260721-3"] },
   };
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="pt-BR"><body><AnalyticsEvents />{children}</body></html>;
 }
-
