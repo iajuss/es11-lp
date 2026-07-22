@@ -29,7 +29,7 @@ export default function Home() {
 
       <section className="about section reveal" id="sobre"><div className="container about-grid"><div><p className="section-tag">SOBRE FELIPE</p><h2>Patrimônio não se constrói por acaso. <em>Ele ganha direção.</em></h2></div><div className="about-copy"><p>Sou sócio da ES11 Capital e atuo com estratégias patrimoniais voltadas para pessoas e empresas que desejam construir patrimônio de forma inteligente.</p><p>Minha trajetória começou na área comercial, onde desenvolvi uma visão consultiva focada em entender os objetivos de cada cliente e encontrar as melhores soluções. Hoje, ajudo clientes a transformar planejamento financeiro em crescimento patrimonial por meio de estratégias personalizadas.</p><blockquote>“Meu trabalho começa antes da apresentação de qualquer produto: começa entendendo o objetivo, o momento financeiro e os planos futuros do cliente.”</blockquote></div></div></section>
 
-      <section className="difference reveal"><div className="container difference-inner"><div className="difference-intro"><p className="section-tag">O DIFERENCIAL</p><span>EM PALAVRAS DE FELIPE SOARES</span></div><blockquote>Não é sobre apresentar um produto. É sobre construir uma estratégia que faça sentido para você.</blockquote><div className="difference-note"><p className="difference-signature">Felipe Soares | Sócio da ES11 Capital</p><p>Meu compromisso é oferecer um atendimento consultivo e personalizado, acompanhando sua evolução e ajudando na tomada de decisões com mais segurança.</p></div></div></section>
+      <section className="difference reveal"><div className="container difference-inner"><div className="difference-intro"><p className="section-tag">O DIFERENCIAL</p></div><blockquote>Não é sobre apresentar um produto. É sobre construir uma estratégia que faça sentido para você.</blockquote><div className="difference-note"><blockquote className="difference-quote">“Meu compromisso é oferecer um atendimento consultivo e personalizado, acompanhando sua evolução e ajudando na tomada de decisões com mais segurança.”</blockquote></div></div></section>
 
       <section className="audiences section reveal"><div className="container"><div className="section-heading"><div><p className="section-tag light">PARA QUEM É O ATENDIMENTO</p><h2>Para quem pensa patrimônio <em>com seriedade.</em></h2></div><p>O ponto de partida é entender o que você deseja construir, adquirir ou organizar - e definir caminhos compatíveis com sua realidade.</p></div><div className="audience-grid"><article><span>01 / PRIORIDADE</span><h3>Investidores</h3><p>Para quem deseja ampliar patrimônio, avaliar aquisições e usar tempo, liquidez e oportunidades de forma estratégica.</p></article><article><span>02</span><h3>Empresários e profissionais liberais</h3><p>Para estruturar ativos e crescimento sem comprometer o fluxo pessoal ou empresarial.</p></article><article><span>03</span><h3>Famílias e empresas</h3><p>Para transformar projetos de imóveis, veículos, frota ou equipamentos em planejamento de longo prazo.</p></article></div></div></section>
 
@@ -51,6 +51,5 @@ export default function Home() {
     </main>
   );
 }
-
 
 
