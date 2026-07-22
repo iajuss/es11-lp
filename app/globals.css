@@ -91,8 +91,8 @@ html,body{overflow-x:clip}
 .difference-intro>span,.difference-note .difference-signature{display:none}
 .difference-note{border-left:2px solid var(--gold);padding-left:24px}
 .difference-note .difference-quote{font:21px/1.42 Georgia,"Times New Roman",serif;color:var(--navy);margin:0}
-.floating-whatsapp:before{content:"";width:19px;height:15px;border:2px solid currentColor;border-radius:50%;position:absolute;left:50%;top:50%;transform:translate(-50%,-56%)}
-.floating-whatsapp:after{content:"";position:absolute;width:7px;height:7px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;left:17px;top:27px;transform:rotate(-20deg)}
+.floating-whatsapp:before,.floating-whatsapp:after{content:none}
+.floating-whatsapp svg{position:static;width:23px;height:23px;fill:currentColor;display:block}
 .photo-label{transition:left .3s ease;filter:none;opacity:1;text-rendering:geometricPrecision;-webkit-font-smoothing:subpixel-antialiased;backface-visibility:visible}
 .photo-label strong,.photo-label small{filter:none;opacity:1;text-rendering:geometricPrecision;-webkit-font-smoothing:subpixel-antialiased;backface-visibility:visible}
 .photo-label small{font-size:11px;font-weight:600}
