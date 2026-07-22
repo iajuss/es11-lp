@@ -59,3 +59,15 @@ html,body{overflow-x:clip}
 .reader-list article a{margin-top:auto}
 @media(max-width:680px){.reader-list{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 18px 70px}.reader-list article{flex-basis:calc(100vw - 54px);height:500px;min-height:500px}.reader-list article h2{min-height:0}}
 
+
+
+/* Ajustes finais de hierarquia e contato. */
+.difference-inner{grid-template-columns:minmax(170px,.38fr) minmax(0,1.2fr) minmax(255px,.72fr);gap:54px;align-items:center}
+.difference-intro{display:grid;gap:12px}.difference-intro .section-tag{margin:0}.difference-intro>span{font-size:10px;letter-spacing:.13em;line-height:1.55;color:#7b6a45}
+.difference blockquote{font:clamp(38px,3.85vw,58px)/1.08 Georgia,"Times New Roman",serif;letter-spacing:-.04em;color:var(--navy);margin:0}
+.difference-note{border-left:1px solid var(--gold);padding-left:25px}.difference-note p{font-size:15px;line-height:1.85;color:#566073;margin:0}.difference-note .difference-signature{font-size:10px;font-weight:700;letter-spacing:.14em;color:#9a7b2f;margin:0 0 15px}
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:70;width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 22px rgba(20,32,58,.2);transition:transform .22s ease,box-shadow .22s ease}.floating-whatsapp:hover{transform:translateY(-3px);box-shadow:0 12px 27px rgba(20,32,58,.28)}.floating-whatsapp svg{width:21px;height:21px;fill:currentColor}.floating-whatsapp span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (min-width:901px){.hero-photo-wrap{align-items:flex-start;padding-top:76px}.hero-photo{height:610px;transform:translateY(0)}.hero-photo-wrap:hover .hero-photo{transform:translateY(-8px)}}
+@media(max-width:900px){.difference-inner{grid-template-columns:1fr;gap:24px}.difference-intro{gap:8px}.difference-note{max-width:570px}.floating-whatsapp{right:16px;bottom:16px;width:42px;height:42px}}
+@media(max-width:680px){.nav-inner{position:relative;display:flex}.nav-inner .logo-link{position:absolute;left:50%;transform:translateX(-50%)}.nav-inner .header-cta{margin-left:auto}.nav-inner .menu-button{margin-left:7px}.difference blockquote{font-size:38px}.difference-note{padding-left:18px}}
+

@@ -1,6 +1,7 @@
 import { articles, consultant, decisions, faq, specialties } from "./lib/felipe";
 import { SiteHeader } from "./components/SiteHeader";
 import { ScrollReveal } from "./components/ScrollReveal";
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
 export default function Home() {
   const profileJsonLd = { "@context": "https://schema.org", "@type": ["ProfilePage", "Person"], name: consultant.name, jobTitle: consultant.role, url: consultant.profileUrl, image: consultant.image, worksFor: { "@type": "Organization", name: "ES11 Capital", url: "https://www.es11capital.com.br/" }, sameAs: ["https://www.instagram.com/felipennsoares/", "https://www.instagram.com/es11capital/"] };
@@ -9,6 +10,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd) }} />
       <ScrollReveal />
       <SiteHeader whatsapp={consultant.whatsapp} />
+      <FloatingWhatsApp href={consultant.whatsapp} />
 
       <section className="hero reveal">
         <div className="hero-orb hero-orb-one" /><div className="hero-orb hero-orb-two" />
@@ -27,7 +29,7 @@ export default function Home() {
 
       <section className="about section reveal" id="sobre"><div className="container about-grid"><div><p className="section-tag">SOBRE FELIPE</p><h2>Patrimônio não se constrói por acaso. <em>Ele ganha direção.</em></h2></div><div className="about-copy"><p>Sou sócio da ES11 Capital e atuo com estratégias patrimoniais voltadas para pessoas e empresas que desejam construir patrimônio de forma inteligente.</p><p>Minha trajetória começou na área comercial, onde desenvolvi uma visão consultiva focada em entender os objetivos de cada cliente e encontrar as melhores soluções. Hoje, ajudo clientes a transformar planejamento financeiro em crescimento patrimonial por meio de estratégias personalizadas.</p><blockquote>“Meu trabalho começa antes da apresentação de qualquer produto: começa entendendo o objetivo, o momento financeiro e os planos futuros do cliente.”</blockquote></div></div></section>
 
-      <section className="difference reveal"><div className="container difference-inner"><p className="section-tag">O DIFERENCIAL</p><h2>Não é sobre apresentar um produto. É sobre construir uma estratégia que faça sentido para você.</h2><p>Meu compromisso é oferecer um atendimento consultivo e personalizado, acompanhando sua evolução e ajudando na tomada de decisões com mais segurança.</p></div></section>
+      <section className="difference reveal"><div className="container difference-inner"><div className="difference-intro"><p className="section-tag">O DIFERENCIAL</p><span>EM PALAVRAS DE FELIPE SOARES</span></div><blockquote>Não é sobre apresentar um produto. É sobre construir uma estratégia que faça sentido para você.</blockquote><div className="difference-note"><p className="difference-signature">Felipe Soares | Sócio da ES11 Capital</p><p>Meu compromisso é oferecer um atendimento consultivo e personalizado, acompanhando sua evolução e ajudando na tomada de decisões com mais segurança.</p></div></div></section>
 
       <section className="audiences section reveal"><div className="container"><div className="section-heading"><div><p className="section-tag light">PARA QUEM É O ATENDIMENTO</p><h2>Para quem pensa patrimônio <em>com seriedade.</em></h2></div><p>O ponto de partida é entender o que você deseja construir, adquirir ou organizar - e definir caminhos compatíveis com sua realidade.</p></div><div className="audience-grid"><article><span>01 / PRIORIDADE</span><h3>Investidores</h3><p>Para quem deseja ampliar patrimônio, avaliar aquisições e usar tempo, liquidez e oportunidades de forma estratégica.</p></article><article><span>02</span><h3>Empresários e profissionais liberais</h3><p>Para estruturar ativos e crescimento sem comprometer o fluxo pessoal ou empresarial.</p></article><article><span>03</span><h3>Famílias e empresas</h3><p>Para transformar projetos de imóveis, veículos, frota ou equipamentos em planejamento de longo prazo.</p></article></div></div></section>
 
@@ -45,9 +47,10 @@ export default function Home() {
 
       <section className="final-cta reveal"><div className="container final-cta-inner"><p className="section-tag light">SEU PRÓXIMO PASSO</p><h2>Objetivos claros. <em>Resultados construídos com estratégia.</em></h2><p>Se você tem um objetivo, mas ainda não sabe qual é o melhor caminho para alcançá-lo, conte comigo. Vamos analisar sua situação e montar um planejamento para o seu momento.</p><a className="gold-button" data-position="final-cta" href={consultant.whatsapp} target="_blank" rel="noreferrer">Agendar conversa com Felipe <b aria-hidden="true">→</b></a></div></section>
 
-      <footer><div className="container footer-grid"><div><img src="/es11-logo.png" alt="ES11 Capital" /><p>Felipe Soares<br /><span>Sócio e Consultor Financeiro</span></p></div><div><small>CONTATO</small><a data-position="footer" href={consultant.whatsapp} target="_blank" rel="noreferrer">(11) 97124-4859</a><p>São Paulo, SP · atendimento em todo o Brasil</p></div><div><small>SIGA</small><a data-position="footer" href="https://www.instagram.com/felipennsoares/" target="_blank" rel="noreferrer">@felipennsoares ↗</a><a data-position="footer" href="https://www.instagram.com/es11capital/" target="_blank" rel="noreferrer">@es11capital ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Felipe Soares · ES11 Capital</span><span>A análise realizada pela ES11 Capital é personalizada e consultiva. Não há promessa de prazo de contemplação, rentabilidade ou resultado financeiro.</span></div></footer>
+      <footer><div className="container footer-grid"><div><img src="/es11-logo.png" alt="ES11 Capital" /><p>Felipe Soares<br /><span>Sócio e Consultor Financeiro</span></p></div><div><small>CONTATO</small><a data-position="footer" href={consultant.whatsapp} target="_blank" rel="noreferrer">(11) 97124-4859</a><a data-position="footer" href="https://www.es11capital.com.br" target="_blank" rel="noreferrer">es11capital.com.br</a><p>São Paulo, SP · atendimento em todo o Brasil</p></div><div><small>SIGA</small><a data-position="footer" href="https://www.instagram.com/felipennsoares/" target="_blank" rel="noreferrer">@felipennsoares ↗</a><a data-position="footer" href="https://www.instagram.com/es11capital/" target="_blank" rel="noreferrer">@es11capital ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Felipe Soares · ES11 Capital</span><span>A análise realizada pela ES11 Capital é personalizada e consultiva. Não há promessa de prazo de contemplação, rentabilidade ou resultado financeiro.</span></div></footer>
     </main>
   );
 }
+
 
 
