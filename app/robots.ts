@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
+import { absoluteUrl } from "./lib/site";
 
 export default function robots(): MetadataRoute.Robots {
-  return { rules: { userAgent: "*", allow: "/" }, sitemap: "https://www.es11capital.com.br/sitemap.xml" };
+  return { rules: { userAgent: "*", allow: "/" }, sitemap: absoluteUrl("/sitemap.xml") };
 }
